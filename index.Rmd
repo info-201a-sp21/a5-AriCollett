@@ -1,1 +1,3 @@
+## Summary Table
 
+`r avg_lives_lost_city_table`

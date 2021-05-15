@@ -4,10 +4,10 @@ This rubric is intended to help guide expectations and increase transparency. Ho
 For this assignment, you must use the appropriate `dplyr` functions to complete each task, returning the specified data type. Partial credit will be given where appropriate. 
 
 ## Set up (**13 points**)
-- Creates the file `analysis.R` (**2 points**)
-- Creates the file `index.Rmd` (**2 points**)
+- Creates the file `analysis.R` (**2 points**) *
+- Creates the file `index.Rmd` (**2 points**) *
 - Suppress any undesired content from the report (e.g., warning messages) (**2 points**)
-- Add a link the the hosted report in the `README.md` file (**2 points**)
+- Add a link the the hosted report in the `README.md` file (**2 points**) *
 - Create a second level header (`##`) for each section of the report (**5 points**)
 
 ## Summary Information (**22 points**)
