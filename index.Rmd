@@ -1,3 +1,56 @@
+---
+title: "Mass Shooting Report"
+author: "Arianna Collett"
+date: "05/15/2021"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(leaflet)
+library(knitr)
+source("analysis.R")
+```
+
+## Summary Information
+
+Link to the original data source: <http://www.shootingtracker.com/>
+
+I created this detailed data report about mass shootings in 2008 throughout United States by summarizing and parsing the data in the csv file provided. During 2008 there were `r number_shootings` shootings across America, with `r num_lives_lost` lives lost during them. The city that was most impacted, meaning the city who had the largest total number of injuries and deaths, by the shootings was `r most_impacted_city`. Additionally, the most impacted state was `r most_impacted_state`. Sadly, the average number of lives lost per city in America that was affected was `r avg_lives_lost`.
+
 ## Summary Table
 
+The following table describes the average number of lives lost per city in descending order. 
+
 `r avg_lives_lost_city_table`
+
+This table shows us that the most deathly city by far is Pompano Beach with an average of 17 lives lost throughout 2018. Additionally, it shows us that there were only 4 cities with a average death count of 10 or above and that most cites did not even have more than 5 lives lost on average throughout 2018. 
+
+## Description of a particular incident 
+
+This particular incident is the most deadly shooting of 2018. Occurring on `r date_max_killed` in `r city_max_killed`, `r max_killed` individuals lost their lives and `r number_injured_max_killed` were injured. This tragedy occurred at Stoneman Douglas High School and was the catalyst for students all across America joining together in an effort to protect their schools from gun violence in the future. 
+
+Link to more information: <https://en.wikipedia.org/wiki/Stoneman_Douglas_High_School_shooting>
+
+## An interactive map
+
+`r interactive_map`
+
+This interactive map shows each of the shooting incidents with the radius of their circle being the impact on the lives of those who were in involved. The map shows that the eastern side of the united states is significantly more impacted by gun violence than the western side. Additionally, when clicking on the circles with the largest radius it is clear that the largest shootings are often in big cites not small ones. 
+
+## A plot of your choice
+
+Question about plot: Which states have the highest numbers of shootings?
+
+```{r map2, echo = FALSE}
+  print(shootings_bar_chart + labs(title = "Number of Shootings per State", 
+                    y="State", x = "Number of Shootings"))
+```
+
+I chose a bar chart layout because it is very easy for the human brain to understand and it shows which states are most in danger of gun violence and should begin to take the most precautions for it. This chart shows that California and Florida have the highest shooting rates for 2018. It also shows that only 3 states have over 20 shootings. 
+
+
+
+
